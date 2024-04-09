@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## createWithdrawal
 
-> \BlockChainRest\BlockChainRest.model\WithdrawalInfo createWithdrawal($create_withdrawal_request)
+> \BlockChainRest\Model\WithdrawalInfo createWithdrawal($create_withdrawal_request)
 
 Request a withdrawal
 
@@ -44,7 +44,7 @@ $apiInstance = new BlockChainRest\Api\PaymentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_withdrawal_request = new \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest(); // \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest | 
+$create_withdrawal_request = new \BlockChainRest\Model\CreateWithdrawalRequest(); // \BlockChainRest\Model\CreateWithdrawalRequest | 
 
 try {
     $result = $apiInstance->createWithdrawal($create_withdrawal_request);
@@ -60,11 +60,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_withdrawal_request** | [**\BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest**](../Model/CreateWithdrawalRequest.md)|  |
+ **create_withdrawal_request** | [**\BlockChainRest\Model\CreateWithdrawalRequest**](../Model/CreateWithdrawalRequest.md)|  |
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\WithdrawalInfo**](../Model/WithdrawalInfo.md)
+[**\BlockChainRest\Model\WithdrawalInfo**](../Model/WithdrawalInfo.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## getAccountByTypeAndCurrency
 
-> \BlockChainRest\BlockChainRest.model\Balance getAccountByTypeAndCurrency($account, $currency)
+> \BlockChainRest\Model\Balance getAccountByTypeAndCurrency($account, $currency)
 
 Receive current account balances
 
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\Balance**](../Model/Balance.md)
+[**\BlockChainRest\Model\Balance**](../Model/Balance.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ## getAccounts
 
-> \BlockChainRest\BlockChainRest.model\BalanceMap getAccounts()
+> \BlockChainRest\Model\BalanceMap getAccounts()
 
 Receive current account balances
 
@@ -184,7 +184,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\BalanceMap**](../Model/BalanceMap.md)
+[**\BlockChainRest\Model\BalanceMap**](../Model/BalanceMap.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ This endpoint does not need any parameter.
 
 ## getDepositAddress
 
-> \BlockChainRest\BlockChainRest.model\DepositAddressCrypto getDepositAddress($currency)
+> \BlockChainRest\Model\DepositAddressCrypto getDepositAddress($currency)
 
 Get a deposit address. Currently only crypto currencies are supported
 
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\DepositAddressCrypto**](../Model/DepositAddressCrypto.md)
+[**\BlockChainRest\Model\DepositAddressCrypto**](../Model/DepositAddressCrypto.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ## getDepositById
 
-> \BlockChainRest\BlockChainRest.model\DepositInfo getDepositById($deposit_id)
+> \BlockChainRest\Model\DepositInfo getDepositById($deposit_id)
 
 Get status about a deposit
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\DepositInfo**](../Model/DepositInfo.md)
+[**\BlockChainRest\Model\DepositInfo**](../Model/DepositInfo.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ## getDeposits
 
-> \BlockChainRest\BlockChainRest.model\DepositInfo[] getDeposits($from, $to)
+> \BlockChainRest\Model\DepositInfo[] getDeposits($from, $to)
 
 Get a list of deposits
 
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\DepositInfo[]**](../Model/DepositInfo.md)
+[**\BlockChainRest\Model\DepositInfo[]**](../Model/DepositInfo.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ## getWhitelist
 
-> \BlockChainRest\BlockChainRest.model\WhitelistEntry[] getWhitelist()
+> \BlockChainRest\Model\WhitelistEntry[] getWhitelist()
 
 Get a list of all whitelisted withdrawal accounts
 
@@ -426,7 +426,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\WhitelistEntry[]**](../Model/WhitelistEntry.md)
+[**\BlockChainRest\Model\WhitelistEntry[]**](../Model/WhitelistEntry.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ This endpoint does not need any parameter.
 
 ## getWhitelistByCurrency
 
-> \BlockChainRest\BlockChainRest.model\WhitelistEntry[] getWhitelistByCurrency($currency)
+> \BlockChainRest\Model\WhitelistEntry[] getWhitelistByCurrency($currency)
 
 Get a list of all whitelisted withdrawal accounts
 
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\WhitelistEntry[]**](../Model/WhitelistEntry.md)
+[**\BlockChainRest\Model\WhitelistEntry[]**](../Model/WhitelistEntry.md)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 
 ## getWithdrawalById
 
-> \BlockChainRest\BlockChainRest.model\WithdrawalInfo getWithdrawalById($withdrawal_id)
+> \BlockChainRest\Model\WithdrawalInfo getWithdrawalById($withdrawal_id)
 
 Get status about a withdrawal
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\WithdrawalInfo**](../Model/WithdrawalInfo.md)
+[**\BlockChainRest\Model\WithdrawalInfo**](../Model/WithdrawalInfo.md)
 
 ### Authorization
 
@@ -566,7 +566,7 @@ Name | Type | Description  | Notes
 
 ## getWithdrawals
 
-> \BlockChainRest\BlockChainRest.model\WithdrawalInfo[] getWithdrawals($from, $to)
+> \BlockChainRest\Model\WithdrawalInfo[] getWithdrawals($from, $to)
 
 Get a list of withdrawals
 
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\WithdrawalInfo[]**](../Model/WithdrawalInfo.md)
+[**\BlockChainRest\Model\WithdrawalInfo[]**](../Model/WithdrawalInfo.md)
 
 ### Authorization
 

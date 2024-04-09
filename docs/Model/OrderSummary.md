@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ex_ord_id** | **int** | The unique order id assigned by the exchange | [optional] 
 **cl_ord_id** | **string** | Reference field provided by client. Cannot exceed 20 characters, only alphanumeric characters are allowed. | 
-**ord_type** | [**\BlockChainRest\BlockChainRest.model\OrdType**](OrdType.md) |  | 
-**ord_status** | [**\BlockChainRest\BlockChainRest.model\OrderStatus**](OrderStatus.md) |  | 
-**side** | [**\BlockChainRest\BlockChainRest.model\Side**](Side.md) |  | 
+**ord_type** | [**\BlockChainRest\Model\OrdType**](OrdType.md) |  | 
+**ord_status** | [**\BlockChainRest\Model\OrderStatus**](OrderStatus.md) |  | 
+**side** | [**\BlockChainRest\Model\Side**](Side.md) |  | 
 **price** | **double** | The limit price for the order | [optional] 
 **text** | **string** | The reason for rejecting the order, if applicable | [optional] 
 **symbol** | **string** | Blockchain symbol identifier | 

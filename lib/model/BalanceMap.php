@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BlockChainRest\BlockChainRest.model;
+namespace BlockChainRest\Model;
 
 use \ArrayAccess;
 use \BlockChainRest\ObjectSerializer;
@@ -57,7 +57,7 @@ class BalanceMap implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'primary' => '\BlockChainRest\BlockChainRest.model\Balance[]'
+        'primary' => '\BlockChainRest\Model\Balance[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class BalanceMap implements ModelInterface, ArrayAccess
     /**
      * Gets primary
      *
-     * @return \BlockChainRest\BlockChainRest.model\Balance[]
+     * @return \BlockChainRest\Model\Balance[]
      */
     public function getPrimary()
     {
@@ -220,7 +220,7 @@ class BalanceMap implements ModelInterface, ArrayAccess
     /**
      * Sets primary
      *
-     * @param \BlockChainRest\BlockChainRest.model\Balance[] $primary primary
+     * @param \BlockChainRest\Model\Balance[] $primary primary
      *
      * @return $this
      */

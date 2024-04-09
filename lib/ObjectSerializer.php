@@ -29,7 +29,7 @@
 
 namespace BlockChainRest;
 
-use BlockChainRest\BlockChainRest.model\ModelInterface;
+use BlockChainRest\Model\ModelInterface;
 
 /**
  * ObjectSerializer Class Doc Comment

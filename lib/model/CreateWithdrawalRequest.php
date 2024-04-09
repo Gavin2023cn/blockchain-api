@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BlockChainRest\BlockChainRest.model;
+namespace BlockChainRest\Model;
 
 use \ArrayAccess;
 use \BlockChainRest\ObjectSerializer;

@@ -90,7 +90,7 @@ $apiInstance = new BlockChainRest\Api\PaymentsApi(
     new GuzzleHttp\Client(),
     $config
 );
-$create_withdrawal_request = new \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest(); // \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest | 
+$create_withdrawal_request = new \BlockChainRest\Model\CreateWithdrawalRequest(); // \BlockChainRest\Model\CreateWithdrawalRequest | 
 
 try {
     $result = $apiInstance->createWithdrawal($create_withdrawal_request);

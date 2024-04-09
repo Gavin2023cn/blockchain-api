@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## createOrder
 
-> \BlockChainRest\BlockChainRest.model\OrderSummary createOrder($base_order)
+> \BlockChainRest\Model\OrderSummary createOrder($base_order)
 
 Add an order
 
@@ -39,7 +39,7 @@ $apiInstance = new BlockChainRest\Api\TradingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$base_order = new \BlockChainRest\BlockChainRest.model\BaseOrder(); // \BlockChainRest\BlockChainRest.model\BaseOrder | Trade
+$base_order = new \BlockChainRest\Model\BaseOrder(); // \BlockChainRest\Model\BaseOrder | Trade
 
 try {
     $result = $apiInstance->createOrder($base_order);
@@ -55,11 +55,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **base_order** | [**\BlockChainRest\BlockChainRest.model\BaseOrder**](../Model/BaseOrder.md)| Trade |
+ **base_order** | [**\BlockChainRest\Model\BaseOrder**](../Model/BaseOrder.md)| Trade |
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\OrderSummary**](../Model/OrderSummary.md)
+[**\BlockChainRest\Model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ void (empty response body)
 
 ## getFees
 
-> \BlockChainRest\BlockChainRest.model\Fees getFees()
+> \BlockChainRest\Model\Fees getFees()
 
 Get current fee level
 
@@ -236,7 +236,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\Fees**](../Model/Fees.md)
+[**\BlockChainRest\Model\Fees**](../Model/Fees.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ This endpoint does not need any parameter.
 
 ## getFills
 
-> \BlockChainRest\BlockChainRest.model\OrderSummary[] getFills($symbol, $from, $to, $limit)
+> \BlockChainRest\Model\OrderSummary[] getFills($symbol, $from, $to, $limit)
 
 Get a list of filled orders
 
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\OrderSummary[]**](../Model/OrderSummary.md)
+[**\BlockChainRest\Model\OrderSummary[]**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ## getOrderById
 
-> \BlockChainRest\BlockChainRest.model\OrderSummary getOrderById($order_id)
+> \BlockChainRest\Model\OrderSummary getOrderById($order_id)
 
 Get a specific order
 
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\OrderSummary**](../Model/OrderSummary.md)
+[**\BlockChainRest\Model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ## getOrders
 
-> \BlockChainRest\BlockChainRest.model\OrderSummary[] getOrders($symbol, $from, $to, $status, $limit)
+> \BlockChainRest\Model\OrderSummary[] getOrders($symbol, $from, $to, $status, $limit)
 
 Get a list orders
 
@@ -412,7 +412,7 @@ $apiInstance = new BlockChainRest\Api\TradingApi(
 $symbol = 'symbol_example'; // string | Only return results for this symbol
 $from = 56; // int | Epoch timestamp in ms
 $to = 56; // int | Epoch timestamp in ms
-$status = new \BlockChainRest\BlockChainRest.model\\BlockChainRest\BlockChainRest.model\OrderStatus(); // \BlockChainRest\BlockChainRest.model\OrderStatus | Order Status
+$status = new \BlockChainRest\Model\\BlockChainRest\Model\OrderStatus(); // \BlockChainRest\Model\OrderStatus | Order Status
 $limit = 100; // int | Maximum amount of results to return in a single call. If omitted, 100 results are returned by default.
 
 try {
@@ -432,12 +432,12 @@ Name | Type | Description  | Notes
  **symbol** | **string**| Only return results for this symbol | [optional]
  **from** | **int**| Epoch timestamp in ms | [optional]
  **to** | **int**| Epoch timestamp in ms | [optional]
- **status** | [**\BlockChainRest\BlockChainRest.model\OrderStatus**](../Model/.md)| Order Status | [optional]
+ **status** | [**\BlockChainRest\Model\OrderStatus**](../Model/.md)| Order Status | [optional]
  **limit** | **int**| Maximum amount of results to return in a single call. If omitted, 100 results are returned by default. | [optional]
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\OrderSummary[]**](../Model/OrderSummary.md)
+[**\BlockChainRest\Model\OrderSummary[]**](../Model/OrderSummary.md)
 
 ### Authorization
 

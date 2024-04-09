@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BlockChainRest\BlockChainRest.model;
+namespace BlockChainRest\Model;
 
 use \ArrayAccess;
 use \BlockChainRest\ObjectSerializer;
@@ -58,8 +58,8 @@ class OrderBook implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'symbol' => 'string',
-        'bids' => '\BlockChainRest\BlockChainRest.model\OrderBookEntry[]',
-        'asks' => '\BlockChainRest\BlockChainRest.model\OrderBookEntry[]'
+        'bids' => '\BlockChainRest\Model\OrderBookEntry[]',
+        'asks' => '\BlockChainRest\Model\OrderBookEntry[]'
     ];
 
     /**
@@ -252,7 +252,7 @@ class OrderBook implements ModelInterface, ArrayAccess
     /**
      * Gets bids
      *
-     * @return \BlockChainRest\BlockChainRest.model\OrderBookEntry[]|null
+     * @return \BlockChainRest\Model\OrderBookEntry[]|null
      */
     public function getBids()
     {
@@ -262,7 +262,7 @@ class OrderBook implements ModelInterface, ArrayAccess
     /**
      * Sets bids
      *
-     * @param \BlockChainRest\BlockChainRest.model\OrderBookEntry[]|null $bids bids
+     * @param \BlockChainRest\Model\OrderBookEntry[]|null $bids bids
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class OrderBook implements ModelInterface, ArrayAccess
     /**
      * Gets asks
      *
-     * @return \BlockChainRest\BlockChainRest.model\OrderBookEntry[]|null
+     * @return \BlockChainRest\Model\OrderBookEntry[]|null
      */
     public function getAsks()
     {
@@ -286,7 +286,7 @@ class OrderBook implements ModelInterface, ArrayAccess
     /**
      * Sets asks
      *
-     * @param \BlockChainRest\BlockChainRest.model\OrderBookEntry[]|null $asks asks
+     * @param \BlockChainRest\Model\OrderBookEntry[]|null $asks asks
      *
      * @return $this
      */

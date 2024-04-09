@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BlockChainRest\BlockChainRest.model;
+namespace BlockChainRest\Model;
 
 use \ArrayAccess;
 use \BlockChainRest\ObjectSerializer;
@@ -62,7 +62,7 @@ class WithdrawalInfo implements ModelInterface, ArrayAccess
         'fee' => 'double',
         'currency' => 'string',
         'beneficiary' => 'string',
-        'state' => '\BlockChainRest\BlockChainRest.model\WithdrawalStatus',
+        'state' => '\BlockChainRest\Model\WithdrawalStatus',
         'timestamp' => 'int'
     ];
 
@@ -381,7 +381,7 @@ class WithdrawalInfo implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \BlockChainRest\BlockChainRest.model\WithdrawalStatus|null
+     * @return \BlockChainRest\Model\WithdrawalStatus|null
      */
     public function getState()
     {
@@ -391,7 +391,7 @@ class WithdrawalInfo implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \BlockChainRest\BlockChainRest.model\WithdrawalStatus|null $state state
+     * @param \BlockChainRest\Model\WithdrawalStatus|null $state state
      *
      * @return $this
      */

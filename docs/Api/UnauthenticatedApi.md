@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 ## getL2OrderBook
 
-> \BlockChainRest\BlockChainRest.model\OrderBook getL2OrderBook($symbol)
+> \BlockChainRest\Model\OrderBook getL2OrderBook($symbol)
 
 L2 Order Book
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\OrderBook**](../Model/OrderBook.md)
+[**\BlockChainRest\Model\OrderBook**](../Model/OrderBook.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ## getL3OrderBook
 
-> \BlockChainRest\BlockChainRest.model\OrderBook getL3OrderBook($symbol)
+> \BlockChainRest\Model\OrderBook getL3OrderBook($symbol)
 
 L3 Order Book
 
@@ -123,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\OrderBook**](../Model/OrderBook.md)
+[**\BlockChainRest\Model\OrderBook**](../Model/OrderBook.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 
 ## getSymbolByName
 
-> \BlockChainRest\BlockChainRest.model\SymbolStatus getSymbolByName($symbol)
+> \BlockChainRest\Model\SymbolStatus getSymbolByName($symbol)
 
 Symbols
 
@@ -186,7 +186,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\SymbolStatus**](../Model/SymbolStatus.md)
+[**\BlockChainRest\Model\SymbolStatus**](../Model/SymbolStatus.md)
 
 ### Authorization
 
@@ -204,7 +204,7 @@ Name | Type | Description  | Notes
 
 ## getSymbols
 
-> map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus] getSymbols()
+> map[string,\BlockChainRest\Model\SymbolStatus] getSymbols()
 
 Symbols
 
@@ -245,7 +245,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus]**](../Model/SymbolStatus.md)
+[**map[string,\BlockChainRest\Model\SymbolStatus]**](../Model/SymbolStatus.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ This endpoint does not need any parameter.
 
 ## getTickerBySymbol
 
-> \BlockChainRest\BlockChainRest.model\PriceEvent getTickerBySymbol($symbol)
+> \BlockChainRest\Model\PriceEvent getTickerBySymbol($symbol)
 
 Price
 
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\PriceEvent**](../Model/PriceEvent.md)
+[**\BlockChainRest\Model\PriceEvent**](../Model/PriceEvent.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ## getTickers
 
-> \BlockChainRest\BlockChainRest.model\PriceEvent[] getTickers()
+> \BlockChainRest\Model\PriceEvent[] getTickers()
 
 Price
 
@@ -363,7 +363,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\BlockChainRest\BlockChainRest.model\PriceEvent[]**](../Model/PriceEvent.md)
+[**\BlockChainRest\Model\PriceEvent[]**](../Model/PriceEvent.md)
 
 ### Authorization
 

@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BlockChainRest\BlockChainRest.model;
+namespace BlockChainRest\Model;
 
 use \ArrayAccess;
 use \BlockChainRest\ObjectSerializer;
@@ -59,9 +59,9 @@ class OrderSummary implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'ex_ord_id' => 'int',
         'cl_ord_id' => 'string',
-        'ord_type' => '\BlockChainRest\BlockChainRest.model\OrdType',
-        'ord_status' => '\BlockChainRest\BlockChainRest.model\OrderStatus',
-        'side' => '\BlockChainRest\BlockChainRest.model\Side',
+        'ord_type' => '\BlockChainRest\Model\OrdType',
+        'ord_status' => '\BlockChainRest\Model\OrderStatus',
+        'side' => '\BlockChainRest\Model\Side',
         'price' => 'double',
         'text' => 'string',
         'symbol' => 'string',
@@ -367,7 +367,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Gets ord_type
      *
-     * @return \BlockChainRest\BlockChainRest.model\OrdType
+     * @return \BlockChainRest\Model\OrdType
      */
     public function getOrdType()
     {
@@ -377,7 +377,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ord_type
      *
-     * @param \BlockChainRest\BlockChainRest.model\OrdType $ord_type ord_type
+     * @param \BlockChainRest\Model\OrdType $ord_type ord_type
      *
      * @return $this
      */
@@ -391,7 +391,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Gets ord_status
      *
-     * @return \BlockChainRest\BlockChainRest.model\OrderStatus
+     * @return \BlockChainRest\Model\OrderStatus
      */
     public function getOrdStatus()
     {
@@ -401,7 +401,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ord_status
      *
-     * @param \BlockChainRest\BlockChainRest.model\OrderStatus $ord_status ord_status
+     * @param \BlockChainRest\Model\OrderStatus $ord_status ord_status
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Gets side
      *
-     * @return \BlockChainRest\BlockChainRest.model\Side
+     * @return \BlockChainRest\Model\Side
      */
     public function getSide()
     {
@@ -425,7 +425,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets side
      *
-     * @param \BlockChainRest\BlockChainRest.model\Side $side side
+     * @param \BlockChainRest\Model\Side $side side
      *
      * @return $this
      */

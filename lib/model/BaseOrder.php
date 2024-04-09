@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BlockChainRest\BlockChainRest.model;
+namespace BlockChainRest\Model;
 
 use \ArrayAccess;
 use \BlockChainRest\ObjectSerializer;
@@ -58,11 +58,11 @@ class BaseOrder implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'cl_ord_id' => 'string',
-        'ord_type' => '\BlockChainRest\BlockChainRest.model\OrdType',
+        'ord_type' => '\BlockChainRest\Model\OrdType',
         'symbol' => 'string',
-        'side' => '\BlockChainRest\BlockChainRest.model\Side',
+        'side' => '\BlockChainRest\Model\Side',
         'order_qty' => 'double',
-        'time_in_force' => '\BlockChainRest\BlockChainRest.model\TimeInForce',
+        'time_in_force' => '\BlockChainRest\Model\TimeInForce',
         'price' => 'double',
         'expire_date' => 'int',
         'min_qty' => 'double',
@@ -327,7 +327,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Gets ord_type
      *
-     * @return \BlockChainRest\BlockChainRest.model\OrdType
+     * @return \BlockChainRest\Model\OrdType
      */
     public function getOrdType()
     {
@@ -337,7 +337,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Sets ord_type
      *
-     * @param \BlockChainRest\BlockChainRest.model\OrdType $ord_type ord_type
+     * @param \BlockChainRest\Model\OrdType $ord_type ord_type
      *
      * @return $this
      */
@@ -380,7 +380,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Gets side
      *
-     * @return \BlockChainRest\BlockChainRest.model\Side
+     * @return \BlockChainRest\Model\Side
      */
     public function getSide()
     {
@@ -390,7 +390,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Sets side
      *
-     * @param \BlockChainRest\BlockChainRest.model\Side $side side
+     * @param \BlockChainRest\Model\Side $side side
      *
      * @return $this
      */
@@ -428,7 +428,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Gets time_in_force
      *
-     * @return \BlockChainRest\BlockChainRest.model\TimeInForce|null
+     * @return \BlockChainRest\Model\TimeInForce|null
      */
     public function getTimeInForce()
     {
@@ -438,7 +438,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Sets time_in_force
      *
-     * @param \BlockChainRest\BlockChainRest.model\TimeInForce|null $time_in_force time_in_force
+     * @param \BlockChainRest\Model\TimeInForce|null $time_in_force time_in_force
      *
      * @return $this
      */

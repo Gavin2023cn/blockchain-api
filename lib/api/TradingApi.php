@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace BlockChainRest\BlockChainRest.api;
+namespace BlockChainRest\Api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -120,11 +120,11 @@ class TradingApi
      *
      * Add an order
      *
-     * @param  \BlockChainRest\BlockChainRest.model\BaseOrder $base_order Trade (required)
+     * @param  \BlockChainRest\Model\BaseOrder $base_order Trade (required)
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \BlockChainRest\BlockChainRest.model\OrderSummary
+     * @return \BlockChainRest\Model\OrderSummary
      */
     public function createOrder($base_order)
     {
@@ -137,11 +137,11 @@ class TradingApi
      *
      * Add an order
      *
-     * @param  \BlockChainRest\BlockChainRest.model\BaseOrder $base_order Trade (required)
+     * @param  \BlockChainRest\Model\BaseOrder $base_order Trade (required)
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \BlockChainRest\BlockChainRest.model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function createOrderWithHttpInfo($base_order)
     {
@@ -178,20 +178,20 @@ class TradingApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\BlockChainRest\BlockChainRest.model\OrderSummary' === '\SplFileObject') {
+                    if ('\BlockChainRest\Model\OrderSummary' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\OrderSummary', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\Model\OrderSummary', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\BlockChainRest\BlockChainRest.model\OrderSummary';
+            $returnType = '\BlockChainRest\Model\OrderSummary';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -210,7 +210,7 @@ class TradingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BlockChainRest\BlockChainRest.model\OrderSummary',
+                        '\BlockChainRest\Model\OrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -225,7 +225,7 @@ class TradingApi
      *
      * Add an order
      *
-     * @param  \BlockChainRest\BlockChainRest.model\BaseOrder $base_order Trade (required)
+     * @param  \BlockChainRest\Model\BaseOrder $base_order Trade (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -245,14 +245,14 @@ class TradingApi
      *
      * Add an order
      *
-     * @param  \BlockChainRest\BlockChainRest.model\BaseOrder $base_order Trade (required)
+     * @param  \BlockChainRest\Model\BaseOrder $base_order Trade (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createOrderAsyncWithHttpInfo($base_order)
     {
-        $returnType = '\BlockChainRest\BlockChainRest.model\OrderSummary';
+        $returnType = '\BlockChainRest\Model\OrderSummary';
         $request = $this->createOrderRequest($base_order);
 
         return $this->client
@@ -292,7 +292,7 @@ class TradingApi
     /**
      * Create request for operation 'createOrder'
      *
-     * @param  \BlockChainRest\BlockChainRest.model\BaseOrder $base_order Trade (required)
+     * @param  \BlockChainRest\Model\BaseOrder $base_order Trade (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -857,7 +857,7 @@ class TradingApi
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \BlockChainRest\BlockChainRest.model\Fees
+     * @return \BlockChainRest\Model\Fees
      */
     public function getFees()
     {
@@ -873,7 +873,7 @@ class TradingApi
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \BlockChainRest\BlockChainRest.model\Fees, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\Model\Fees, HTTP status code, HTTP response headers (array of strings)
      */
     public function getFeesWithHttpInfo()
     {
@@ -910,20 +910,20 @@ class TradingApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\BlockChainRest\BlockChainRest.model\Fees' === '\SplFileObject') {
+                    if ('\BlockChainRest\Model\Fees' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\Fees', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\Model\Fees', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\BlockChainRest\BlockChainRest.model\Fees';
+            $returnType = '\BlockChainRest\Model\Fees';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -942,7 +942,7 @@ class TradingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BlockChainRest\BlockChainRest.model\Fees',
+                        '\BlockChainRest\Model\Fees',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -982,7 +982,7 @@ class TradingApi
      */
     public function getFeesAsyncWithHttpInfo()
     {
-        $returnType = '\BlockChainRest\BlockChainRest.model\Fees';
+        $returnType = '\BlockChainRest\Model\Fees';
         $request = $this->getFeesRequest();
 
         return $this->client
@@ -1120,7 +1120,7 @@ class TradingApi
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \BlockChainRest\BlockChainRest.model\OrderSummary[]
+     * @return \BlockChainRest\Model\OrderSummary[]
      */
     public function getFills($symbol = null, $from = null, $to = null, $limit = null)
     {
@@ -1140,7 +1140,7 @@ class TradingApi
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \BlockChainRest\BlockChainRest.model\OrderSummary[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\Model\OrderSummary[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getFillsWithHttpInfo($symbol = null, $from = null, $to = null, $limit = null)
     {
@@ -1177,20 +1177,20 @@ class TradingApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\BlockChainRest\BlockChainRest.model\OrderSummary[]' === '\SplFileObject') {
+                    if ('\BlockChainRest\Model\OrderSummary[]' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\OrderSummary[]', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\Model\OrderSummary[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\BlockChainRest\BlockChainRest.model\OrderSummary[]';
+            $returnType = '\BlockChainRest\Model\OrderSummary[]';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1209,7 +1209,7 @@ class TradingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BlockChainRest\BlockChainRest.model\OrderSummary[]',
+                        '\BlockChainRest\Model\OrderSummary[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1257,7 +1257,7 @@ class TradingApi
      */
     public function getFillsAsyncWithHttpInfo($symbol = null, $from = null, $to = null, $limit = null)
     {
-        $returnType = '\BlockChainRest\BlockChainRest.model\OrderSummary[]';
+        $returnType = '\BlockChainRest\Model\OrderSummary[]';
         $request = $this->getFillsRequest($symbol, $from, $to, $limit);
 
         return $this->client
@@ -1451,7 +1451,7 @@ class TradingApi
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \BlockChainRest\BlockChainRest.model\OrderSummary
+     * @return \BlockChainRest\Model\OrderSummary
      */
     public function getOrderById($order_id)
     {
@@ -1468,7 +1468,7 @@ class TradingApi
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \BlockChainRest\BlockChainRest.model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\Model\OrderSummary, HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrderByIdWithHttpInfo($order_id)
     {
@@ -1505,20 +1505,20 @@ class TradingApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\BlockChainRest\BlockChainRest.model\OrderSummary' === '\SplFileObject') {
+                    if ('\BlockChainRest\Model\OrderSummary' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\OrderSummary', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\Model\OrderSummary', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\BlockChainRest\BlockChainRest.model\OrderSummary';
+            $returnType = '\BlockChainRest\Model\OrderSummary';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1537,7 +1537,7 @@ class TradingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BlockChainRest\BlockChainRest.model\OrderSummary',
+                        '\BlockChainRest\Model\OrderSummary',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1579,7 +1579,7 @@ class TradingApi
      */
     public function getOrderByIdAsyncWithHttpInfo($order_id)
     {
-        $returnType = '\BlockChainRest\BlockChainRest.model\OrderSummary';
+        $returnType = '\BlockChainRest\Model\OrderSummary';
         $request = $this->getOrderByIdRequest($order_id);
 
         return $this->client
@@ -1728,12 +1728,12 @@ class TradingApi
      * @param  string $symbol Only return results for this symbol (optional)
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
-     * @param  \BlockChainRest\BlockChainRest.model\OrderStatus $status Order Status (optional)
+     * @param  \BlockChainRest\Model\OrderStatus $status Order Status (optional)
      * @param  int $limit Maximum amount of results to return in a single call. If omitted, 100 results are returned by default. (optional)
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \BlockChainRest\BlockChainRest.model\OrderSummary[]
+     * @return \BlockChainRest\Model\OrderSummary[]
      */
     public function getOrders($symbol = null, $from = null, $to = null, $status = null, $limit = null)
     {
@@ -1749,12 +1749,12 @@ class TradingApi
      * @param  string $symbol Only return results for this symbol (optional)
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
-     * @param  \BlockChainRest\BlockChainRest.model\OrderStatus $status Order Status (optional)
+     * @param  \BlockChainRest\Model\OrderStatus $status Order Status (optional)
      * @param  int $limit Maximum amount of results to return in a single call. If omitted, 100 results are returned by default. (optional)
      *
      * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \BlockChainRest\BlockChainRest.model\OrderSummary[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\Model\OrderSummary[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getOrdersWithHttpInfo($symbol = null, $from = null, $to = null, $status = null, $limit = null)
     {
@@ -1791,20 +1791,20 @@ class TradingApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\BlockChainRest\BlockChainRest.model\OrderSummary[]' === '\SplFileObject') {
+                    if ('\BlockChainRest\Model\OrderSummary[]' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\OrderSummary[]', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\Model\OrderSummary[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\BlockChainRest\BlockChainRest.model\OrderSummary[]';
+            $returnType = '\BlockChainRest\Model\OrderSummary[]';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1823,7 +1823,7 @@ class TradingApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\BlockChainRest\BlockChainRest.model\OrderSummary[]',
+                        '\BlockChainRest\Model\OrderSummary[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1841,7 +1841,7 @@ class TradingApi
      * @param  string $symbol Only return results for this symbol (optional)
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
-     * @param  \BlockChainRest\BlockChainRest.model\OrderStatus $status Order Status (optional)
+     * @param  \BlockChainRest\Model\OrderStatus $status Order Status (optional)
      * @param  int $limit Maximum amount of results to return in a single call. If omitted, 100 results are returned by default. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1865,7 +1865,7 @@ class TradingApi
      * @param  string $symbol Only return results for this symbol (optional)
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
-     * @param  \BlockChainRest\BlockChainRest.model\OrderStatus $status Order Status (optional)
+     * @param  \BlockChainRest\Model\OrderStatus $status Order Status (optional)
      * @param  int $limit Maximum amount of results to return in a single call. If omitted, 100 results are returned by default. (optional)
      *
      * @throws \InvalidArgumentException
@@ -1873,7 +1873,7 @@ class TradingApi
      */
     public function getOrdersAsyncWithHttpInfo($symbol = null, $from = null, $to = null, $status = null, $limit = null)
     {
-        $returnType = '\BlockChainRest\BlockChainRest.model\OrderSummary[]';
+        $returnType = '\BlockChainRest\Model\OrderSummary[]';
         $request = $this->getOrdersRequest($symbol, $from, $to, $status, $limit);
 
         return $this->client
@@ -1916,7 +1916,7 @@ class TradingApi
      * @param  string $symbol Only return results for this symbol (optional)
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
-     * @param  \BlockChainRest\BlockChainRest.model\OrderStatus $status Order Status (optional)
+     * @param  \BlockChainRest\Model\OrderStatus $status Order Status (optional)
      * @param  int $limit Maximum amount of results to return in a single call. If omitted, 100 results are returned by default. (optional)
      *
      * @throws \InvalidArgumentException

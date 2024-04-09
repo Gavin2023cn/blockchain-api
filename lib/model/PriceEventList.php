@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace BlockChainRest\BlockChainRest.model;
+namespace BlockChainRest\Model;
 
 use \ArrayAccess;
 use \BlockChainRest\ObjectSerializer;
@@ -57,7 +57,7 @@ class PriceEventList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'orders' => '\BlockChainRest\BlockChainRest.model\PriceEvent[]'
+        'orders' => '\BlockChainRest\Model\PriceEvent[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class PriceEventList implements ModelInterface, ArrayAccess
     /**
      * Gets orders
      *
-     * @return \BlockChainRest\BlockChainRest.model\PriceEvent[]|null
+     * @return \BlockChainRest\Model\PriceEvent[]|null
      */
     public function getOrders()
     {
@@ -217,7 +217,7 @@ class PriceEventList implements ModelInterface, ArrayAccess
     /**
      * Sets orders
      *
-     * @param \BlockChainRest\BlockChainRest.model\PriceEvent[]|null $orders orders
+     * @param \BlockChainRest\Model\PriceEvent[]|null $orders orders
      *
      * @return $this
      */
