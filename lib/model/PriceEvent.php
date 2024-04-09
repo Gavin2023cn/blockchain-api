@@ -182,7 +182,7 @@ class PriceEvent implements ModelInterface, ArrayAccess
      *
      * @var mixed[]
      */
-    protected $container = [];
+    public $container = [];
 
     /**
      * Constructor
