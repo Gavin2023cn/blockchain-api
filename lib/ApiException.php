@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest;
+namespace BlockChainRest;
 
 use \Exception;
 
@@ -34,7 +34,7 @@ use \Exception;
  * ApiException Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

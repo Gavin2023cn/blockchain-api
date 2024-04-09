@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.api;
+namespace BlockChainRest\BlockChainRest.api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use com.blockchain.exchange.rest\ApiException;
-use com.blockchain.exchange.rest\Configuration;
-use com.blockchain.exchange.rest\HeaderSelector;
-use com.blockchain.exchange.rest\ObjectSerializer;
+use BlockChainRest\ApiException;
+use BlockChainRest\Configuration;
+use BlockChainRest\HeaderSelector;
+use BlockChainRest\ObjectSerializer;
 
 /**
  * PaymentsApi Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -120,11 +120,11 @@ class PaymentsApi
      *
      * Request a withdrawal
      *
-     * @param  \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest $create_withdrawal_request create_withdrawal_request (required)
+     * @param  \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest $create_withdrawal_request create_withdrawal_request (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo
+     * @return \BlockChainRest\BlockChainRest.model\WithdrawalInfo
      */
     public function createWithdrawal($create_withdrawal_request)
     {
@@ -137,11 +137,11 @@ class PaymentsApi
      *
      * Request a withdrawal
      *
-     * @param  \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest $create_withdrawal_request (required)
+     * @param  \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest $create_withdrawal_request (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\WithdrawalInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function createWithdrawalWithHttpInfo($create_withdrawal_request)
     {
@@ -178,20 +178,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\WithdrawalInfo' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\WithdrawalInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo';
+            $returnType = '\BlockChainRest\BlockChainRest.model\WithdrawalInfo';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -210,7 +210,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo',
+                        '\BlockChainRest\BlockChainRest.model\WithdrawalInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -225,7 +225,7 @@ class PaymentsApi
      *
      * Request a withdrawal
      *
-     * @param  \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest $create_withdrawal_request (required)
+     * @param  \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest $create_withdrawal_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -245,14 +245,14 @@ class PaymentsApi
      *
      * Request a withdrawal
      *
-     * @param  \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest $create_withdrawal_request (required)
+     * @param  \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest $create_withdrawal_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function createWithdrawalAsyncWithHttpInfo($create_withdrawal_request)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo';
+        $returnType = '\BlockChainRest\BlockChainRest.model\WithdrawalInfo';
         $request = $this->createWithdrawalRequest($create_withdrawal_request);
 
         return $this->client
@@ -292,7 +292,7 @@ class PaymentsApi
     /**
      * Create request for operation 'createWithdrawal'
      *
-     * @param  \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest $create_withdrawal_request (required)
+     * @param  \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest $create_withdrawal_request (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -396,9 +396,9 @@ class PaymentsApi
      * @param  string $account Account (required)
      * @param  string $currency Currency (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance
+     * @return \BlockChainRest\BlockChainRest.model\Balance
      */
     public function getAccountByTypeAndCurrency($account, $currency)
     {
@@ -414,9 +414,9 @@ class PaymentsApi
      * @param  string $account Account (required)
      * @param  string $currency Currency (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\Balance, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountByTypeAndCurrencyWithHttpInfo($account, $currency)
     {
@@ -453,20 +453,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\Balance' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\Balance', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance';
+            $returnType = '\BlockChainRest\BlockChainRest.model\Balance';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -485,7 +485,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance',
+                        '\BlockChainRest\BlockChainRest.model\Balance',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -529,7 +529,7 @@ class PaymentsApi
      */
     public function getAccountByTypeAndCurrencyAsyncWithHttpInfo($account, $currency)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance';
+        $returnType = '\BlockChainRest\BlockChainRest.model\Balance';
         $request = $this->getAccountByTypeAndCurrencyRequest($account, $currency);
 
         return $this->client
@@ -695,9 +695,9 @@ class PaymentsApi
      * Receive current account balances
      *
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap
+     * @return \BlockChainRest\BlockChainRest.model\BalanceMap
      */
     public function getAccounts()
     {
@@ -711,9 +711,9 @@ class PaymentsApi
      * Receive current account balances
      *
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\BalanceMap, HTTP status code, HTTP response headers (array of strings)
      */
     public function getAccountsWithHttpInfo()
     {
@@ -750,20 +750,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\BalanceMap' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\BalanceMap', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap';
+            $returnType = '\BlockChainRest\BlockChainRest.model\BalanceMap';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -782,7 +782,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap',
+                        '\BlockChainRest\BlockChainRest.model\BalanceMap',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -822,7 +822,7 @@ class PaymentsApi
      */
     public function getAccountsAsyncWithHttpInfo()
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap';
+        $returnType = '\BlockChainRest\BlockChainRest.model\BalanceMap';
         $request = $this->getAccountsRequest();
 
         return $this->client
@@ -955,9 +955,9 @@ class PaymentsApi
      *
      * @param  string $currency Currency (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto
+     * @return \BlockChainRest\BlockChainRest.model\DepositAddressCrypto
      */
     public function getDepositAddress($currency)
     {
@@ -972,9 +972,9 @@ class PaymentsApi
      *
      * @param  string $currency Currency (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\DepositAddressCrypto, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDepositAddressWithHttpInfo($currency)
     {
@@ -1011,20 +1011,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\DepositAddressCrypto' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\DepositAddressCrypto', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto';
+            $returnType = '\BlockChainRest\BlockChainRest.model\DepositAddressCrypto';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1043,7 +1043,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto',
+                        '\BlockChainRest\BlockChainRest.model\DepositAddressCrypto',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1085,7 +1085,7 @@ class PaymentsApi
      */
     public function getDepositAddressAsyncWithHttpInfo($currency)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto';
+        $returnType = '\BlockChainRest\BlockChainRest.model\DepositAddressCrypto';
         $request = $this->getDepositAddressRequest($currency);
 
         return $this->client
@@ -1237,9 +1237,9 @@ class PaymentsApi
      *
      * @param  string $deposit_id Deposit ID (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo
+     * @return \BlockChainRest\BlockChainRest.model\DepositInfo
      */
     public function getDepositById($deposit_id)
     {
@@ -1254,9 +1254,9 @@ class PaymentsApi
      *
      * @param  string $deposit_id Deposit ID (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\DepositInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getDepositByIdWithHttpInfo($deposit_id)
     {
@@ -1293,20 +1293,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\DepositInfo' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\DepositInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo';
+            $returnType = '\BlockChainRest\BlockChainRest.model\DepositInfo';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1325,7 +1325,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo',
+                        '\BlockChainRest\BlockChainRest.model\DepositInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1367,7 +1367,7 @@ class PaymentsApi
      */
     public function getDepositByIdAsyncWithHttpInfo($deposit_id)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo';
+        $returnType = '\BlockChainRest\BlockChainRest.model\DepositInfo';
         $request = $this->getDepositByIdRequest($deposit_id);
 
         return $this->client
@@ -1516,9 +1516,9 @@ class PaymentsApi
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[]
+     * @return \BlockChainRest\BlockChainRest.model\DepositInfo[]
      */
     public function getDeposits($from = null, $to = null)
     {
@@ -1534,9 +1534,9 @@ class PaymentsApi
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\DepositInfo[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getDepositsWithHttpInfo($from = null, $to = null)
     {
@@ -1573,20 +1573,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[]' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\DepositInfo[]' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[]', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\DepositInfo[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[]';
+            $returnType = '\BlockChainRest\BlockChainRest.model\DepositInfo[]';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1605,7 +1605,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[]',
+                        '\BlockChainRest\BlockChainRest.model\DepositInfo[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1649,7 +1649,7 @@ class PaymentsApi
      */
     public function getDepositsAsyncWithHttpInfo($from = null, $to = null)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[]';
+        $returnType = '\BlockChainRest\BlockChainRest.model\DepositInfo[]';
         $request = $this->getDepositsRequest($from, $to);
 
         return $this->client
@@ -1805,9 +1805,9 @@ class PaymentsApi
      * Get a list of all whitelisted withdrawal accounts
      *
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]
+     * @return \BlockChainRest\BlockChainRest.model\WhitelistEntry[]
      */
     public function getWhitelist()
     {
@@ -1821,9 +1821,9 @@ class PaymentsApi
      * Get a list of all whitelisted withdrawal accounts
      *
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\WhitelistEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getWhitelistWithHttpInfo()
     {
@@ -1860,20 +1860,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\WhitelistEntry[]' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\WhitelistEntry[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]';
+            $returnType = '\BlockChainRest\BlockChainRest.model\WhitelistEntry[]';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1892,7 +1892,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]',
+                        '\BlockChainRest\BlockChainRest.model\WhitelistEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1932,7 +1932,7 @@ class PaymentsApi
      */
     public function getWhitelistAsyncWithHttpInfo()
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]';
+        $returnType = '\BlockChainRest\BlockChainRest.model\WhitelistEntry[]';
         $request = $this->getWhitelistRequest();
 
         return $this->client
@@ -2065,9 +2065,9 @@ class PaymentsApi
      *
      * @param  string $currency Currency (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]
+     * @return \BlockChainRest\BlockChainRest.model\WhitelistEntry[]
      */
     public function getWhitelistByCurrency($currency)
     {
@@ -2082,9 +2082,9 @@ class PaymentsApi
      *
      * @param  string $currency Currency (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\WhitelistEntry[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getWhitelistByCurrencyWithHttpInfo($currency)
     {
@@ -2121,20 +2121,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\WhitelistEntry[]' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\WhitelistEntry[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]';
+            $returnType = '\BlockChainRest\BlockChainRest.model\WhitelistEntry[]';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -2153,7 +2153,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]',
+                        '\BlockChainRest\BlockChainRest.model\WhitelistEntry[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2195,7 +2195,7 @@ class PaymentsApi
      */
     public function getWhitelistByCurrencyAsyncWithHttpInfo($currency)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]';
+        $returnType = '\BlockChainRest\BlockChainRest.model\WhitelistEntry[]';
         $request = $this->getWhitelistByCurrencyRequest($currency);
 
         return $this->client
@@ -2347,9 +2347,9 @@ class PaymentsApi
      *
      * @param  string $withdrawal_id Withdrawal ID (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo
+     * @return \BlockChainRest\BlockChainRest.model\WithdrawalInfo
      */
     public function getWithdrawalById($withdrawal_id)
     {
@@ -2364,9 +2364,9 @@ class PaymentsApi
      *
      * @param  string $withdrawal_id Withdrawal ID (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\WithdrawalInfo, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithdrawalByIdWithHttpInfo($withdrawal_id)
     {
@@ -2403,20 +2403,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\WithdrawalInfo' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\WithdrawalInfo', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo';
+            $returnType = '\BlockChainRest\BlockChainRest.model\WithdrawalInfo';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -2435,7 +2435,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo',
+                        '\BlockChainRest\BlockChainRest.model\WithdrawalInfo',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2477,7 +2477,7 @@ class PaymentsApi
      */
     public function getWithdrawalByIdAsyncWithHttpInfo($withdrawal_id)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo';
+        $returnType = '\BlockChainRest\BlockChainRest.model\WithdrawalInfo';
         $request = $this->getWithdrawalByIdRequest($withdrawal_id);
 
         return $this->client
@@ -2626,9 +2626,9 @@ class PaymentsApi
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[]
+     * @return \BlockChainRest\BlockChainRest.model\WithdrawalInfo[]
      */
     public function getWithdrawals($from = null, $to = null)
     {
@@ -2644,9 +2644,9 @@ class PaymentsApi
      * @param  int $from Epoch timestamp in ms (optional)
      * @param  int $to Epoch timestamp in ms (optional)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\WithdrawalInfo[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithdrawalsWithHttpInfo($from = null, $to = null)
     {
@@ -2683,20 +2683,20 @@ class PaymentsApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[]' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\WithdrawalInfo[]' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[]', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\WithdrawalInfo[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[]';
+            $returnType = '\BlockChainRest\BlockChainRest.model\WithdrawalInfo[]';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -2715,7 +2715,7 @@ class PaymentsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[]',
+                        '\BlockChainRest\BlockChainRest.model\WithdrawalInfo[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2759,7 +2759,7 @@ class PaymentsApi
      */
     public function getWithdrawalsAsyncWithHttpInfo($from = null, $to = null)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[]';
+        $returnType = '\BlockChainRest\BlockChainRest.model\WithdrawalInfo[]';
         $request = $this->getWithdrawalsRequest($from, $to);
 
         return $this->client

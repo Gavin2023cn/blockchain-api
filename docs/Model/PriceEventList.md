@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**orders** | [**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]**](PriceEvent.md) |  | [optional] 
+**orders** | [**\BlockChainRest\BlockChainRest.model\PriceEvent[]**](PriceEvent.md) |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

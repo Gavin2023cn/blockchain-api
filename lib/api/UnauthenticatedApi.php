@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.api;
+namespace BlockChainRest\BlockChainRest.api;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -34,16 +34,16 @@ use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\RequestOptions;
-use com.blockchain.exchange.rest\ApiException;
-use com.blockchain.exchange.rest\Configuration;
-use com.blockchain.exchange.rest\HeaderSelector;
-use com.blockchain.exchange.rest\ObjectSerializer;
+use BlockChainRest\ApiException;
+use BlockChainRest\Configuration;
+use BlockChainRest\HeaderSelector;
+use BlockChainRest\ObjectSerializer;
 
 /**
  * UnauthenticatedApi Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -122,9 +122,9 @@ class UnauthenticatedApi
      *
      * @param  string $symbol Symbol (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook
+     * @return \BlockChainRest\BlockChainRest.model\OrderBook
      */
     public function getL2OrderBook($symbol)
     {
@@ -139,9 +139,9 @@ class UnauthenticatedApi
      *
      * @param  string $symbol Symbol (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\OrderBook, HTTP status code, HTTP response headers (array of strings)
      */
     public function getL2OrderBookWithHttpInfo($symbol)
     {
@@ -178,20 +178,20 @@ class UnauthenticatedApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\OrderBook' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\OrderBook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook';
+            $returnType = '\BlockChainRest\BlockChainRest.model\OrderBook';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -210,7 +210,7 @@ class UnauthenticatedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook',
+                        '\BlockChainRest\BlockChainRest.model\OrderBook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -252,7 +252,7 @@ class UnauthenticatedApi
      */
     public function getL2OrderBookAsyncWithHttpInfo($symbol)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook';
+        $returnType = '\BlockChainRest\BlockChainRest.model\OrderBook';
         $request = $this->getL2OrderBookRequest($symbol);
 
         return $this->client
@@ -404,9 +404,9 @@ class UnauthenticatedApi
      *
      * @param  string $symbol Symbol (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook
+     * @return \BlockChainRest\BlockChainRest.model\OrderBook
      */
     public function getL3OrderBook($symbol)
     {
@@ -421,9 +421,9 @@ class UnauthenticatedApi
      *
      * @param  string $symbol Symbol (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\OrderBook, HTTP status code, HTTP response headers (array of strings)
      */
     public function getL3OrderBookWithHttpInfo($symbol)
     {
@@ -460,20 +460,20 @@ class UnauthenticatedApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\OrderBook' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\OrderBook', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook';
+            $returnType = '\BlockChainRest\BlockChainRest.model\OrderBook';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -492,7 +492,7 @@ class UnauthenticatedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook',
+                        '\BlockChainRest\BlockChainRest.model\OrderBook',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -534,7 +534,7 @@ class UnauthenticatedApi
      */
     public function getL3OrderBookAsyncWithHttpInfo($symbol)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBook';
+        $returnType = '\BlockChainRest\BlockChainRest.model\OrderBook';
         $request = $this->getL3OrderBookRequest($symbol);
 
         return $this->client
@@ -686,9 +686,9 @@ class UnauthenticatedApi
      *
      * @param  string $symbol Symbol (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus
+     * @return \BlockChainRest\BlockChainRest.model\SymbolStatus
      */
     public function getSymbolByName($symbol)
     {
@@ -703,9 +703,9 @@ class UnauthenticatedApi
      *
      * @param  string $symbol Symbol (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\SymbolStatus, HTTP status code, HTTP response headers (array of strings)
      */
     public function getSymbolByNameWithHttpInfo($symbol)
     {
@@ -742,20 +742,20 @@ class UnauthenticatedApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\SymbolStatus' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\SymbolStatus', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus';
+            $returnType = '\BlockChainRest\BlockChainRest.model\SymbolStatus';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -774,7 +774,7 @@ class UnauthenticatedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus',
+                        '\BlockChainRest\BlockChainRest.model\SymbolStatus',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -816,7 +816,7 @@ class UnauthenticatedApi
      */
     public function getSymbolByNameAsyncWithHttpInfo($symbol)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus';
+        $returnType = '\BlockChainRest\BlockChainRest.model\SymbolStatus';
         $request = $this->getSymbolByNameRequest($symbol);
 
         return $this->client
@@ -967,9 +967,9 @@ class UnauthenticatedApi
      * Symbols
      *
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return map[string,\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus]
+     * @return map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus]
      */
     public function getSymbols()
     {
@@ -983,9 +983,9 @@ class UnauthenticatedApi
      * Symbols
      *
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of map[string,\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus], HTTP status code, HTTP response headers (array of strings)
+     * @return array of map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus], HTTP status code, HTTP response headers (array of strings)
      */
     public function getSymbolsWithHttpInfo()
     {
@@ -1022,20 +1022,20 @@ class UnauthenticatedApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('map[string,\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus]' === '\SplFileObject') {
+                    if ('map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus]' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'map[string,\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus]', []),
+                        ObjectSerializer::deserialize($content, 'map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = 'map[string,\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus]';
+            $returnType = 'map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus]';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1054,7 +1054,7 @@ class UnauthenticatedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'map[string,\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus]',
+                        'map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1094,7 +1094,7 @@ class UnauthenticatedApi
      */
     public function getSymbolsAsyncWithHttpInfo()
     {
-        $returnType = 'map[string,\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\SymbolStatus]';
+        $returnType = 'map[string,\BlockChainRest\BlockChainRest.model\SymbolStatus]';
         $request = $this->getSymbolsRequest();
 
         return $this->client
@@ -1227,9 +1227,9 @@ class UnauthenticatedApi
      *
      * @param  string $symbol Symbol (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent
+     * @return \BlockChainRest\BlockChainRest.model\PriceEvent
      */
     public function getTickerBySymbol($symbol)
     {
@@ -1244,9 +1244,9 @@ class UnauthenticatedApi
      *
      * @param  string $symbol Symbol (required)
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\PriceEvent, HTTP status code, HTTP response headers (array of strings)
      */
     public function getTickerBySymbolWithHttpInfo($symbol)
     {
@@ -1283,20 +1283,20 @@ class UnauthenticatedApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\PriceEvent' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\PriceEvent', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent';
+            $returnType = '\BlockChainRest\BlockChainRest.model\PriceEvent';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1315,7 +1315,7 @@ class UnauthenticatedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent',
+                        '\BlockChainRest\BlockChainRest.model\PriceEvent',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1357,7 +1357,7 @@ class UnauthenticatedApi
      */
     public function getTickerBySymbolAsyncWithHttpInfo($symbol)
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent';
+        $returnType = '\BlockChainRest\BlockChainRest.model\PriceEvent';
         $request = $this->getTickerBySymbolRequest($symbol);
 
         return $this->client
@@ -1508,9 +1508,9 @@ class UnauthenticatedApi
      * Price
      *
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]
+     * @return \BlockChainRest\BlockChainRest.model\PriceEvent[]
      */
     public function getTickers()
     {
@@ -1524,9 +1524,9 @@ class UnauthenticatedApi
      * Price
      *
      *
-     * @throws \com.blockchain.exchange.rest\ApiException on non-2xx response
+     * @throws \BlockChainRest\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \BlockChainRest\BlockChainRest.model\PriceEvent[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getTickersWithHttpInfo()
     {
@@ -1563,20 +1563,20 @@ class UnauthenticatedApi
             $responseBody = $response->getBody();
             switch($statusCode) {
                 case 200:
-                    if ('\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]' === '\SplFileObject') {
+                    if ('\BlockChainRest\BlockChainRest.model\PriceEvent[]' === '\SplFileObject') {
                         $content = $responseBody; //stream goes to serializer
                     } else {
                         $content = (string) $responseBody;
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]', []),
+                        ObjectSerializer::deserialize($content, '\BlockChainRest\BlockChainRest.model\PriceEvent[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
             }
 
-            $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]';
+            $returnType = '\BlockChainRest\BlockChainRest.model\PriceEvent[]';
             $responseBody = $response->getBody();
             if ($returnType === '\SplFileObject') {
                 $content = $responseBody; //stream goes to serializer
@@ -1595,7 +1595,7 @@ class UnauthenticatedApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]',
+                        '\BlockChainRest\BlockChainRest.model\PriceEvent[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1635,7 +1635,7 @@ class UnauthenticatedApi
      */
     public function getTickersAsyncWithHttpInfo()
     {
-        $returnType = '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]';
+        $returnType = '\BlockChainRest\BlockChainRest.model\PriceEvent[]';
         $request = $this->getTickersRequest();
 
         return $this->client

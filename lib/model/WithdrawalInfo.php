@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.model;
+namespace BlockChainRest\BlockChainRest.model;
 
 use \ArrayAccess;
-use \com.blockchain.exchange.rest\ObjectSerializer;
+use \BlockChainRest\ObjectSerializer;
 
 /**
  * WithdrawalInfo Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -62,7 +62,7 @@ class WithdrawalInfo implements ModelInterface, ArrayAccess
         'fee' => 'double',
         'currency' => 'string',
         'beneficiary' => 'string',
-        'state' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalStatus',
+        'state' => '\BlockChainRest\BlockChainRest.model\WithdrawalStatus',
         'timestamp' => 'int'
     ];
 
@@ -381,7 +381,7 @@ class WithdrawalInfo implements ModelInterface, ArrayAccess
     /**
      * Gets state
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalStatus|null
+     * @return \BlockChainRest\BlockChainRest.model\WithdrawalStatus|null
      */
     public function getState()
     {
@@ -391,7 +391,7 @@ class WithdrawalInfo implements ModelInterface, ArrayAccess
     /**
      * Sets state
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalStatus|null $state state
+     * @param \BlockChainRest\BlockChainRest.model\WithdrawalStatus|null $state state
      *
      * @return $this
      */

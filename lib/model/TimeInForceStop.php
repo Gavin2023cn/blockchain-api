@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,15 +27,15 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.model;
-use \com.blockchain.exchange.rest\ObjectSerializer;
+namespace BlockChainRest\BlockChainRest.model;
+use \BlockChainRest\ObjectSerializer;
 
 /**
  * TimeInForceStop Class Doc Comment
  *
  * @category Class
  * @description \&quot;GTC\&quot; for Good Till Cancel, \&quot;GTD\&quot; Good Till Date
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

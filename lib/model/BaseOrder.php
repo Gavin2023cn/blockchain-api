@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.model;
+namespace BlockChainRest\BlockChainRest.model;
 
 use \ArrayAccess;
-use \com.blockchain.exchange.rest\ObjectSerializer;
+use \BlockChainRest\ObjectSerializer;
 
 /**
  * BaseOrder Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,11 +58,11 @@ class BaseOrder implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'cl_ord_id' => 'string',
-        'ord_type' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrdType',
+        'ord_type' => '\BlockChainRest\BlockChainRest.model\OrdType',
         'symbol' => 'string',
-        'side' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Side',
+        'side' => '\BlockChainRest\BlockChainRest.model\Side',
         'order_qty' => 'double',
-        'time_in_force' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\TimeInForce',
+        'time_in_force' => '\BlockChainRest\BlockChainRest.model\TimeInForce',
         'price' => 'double',
         'expire_date' => 'int',
         'min_qty' => 'double',
@@ -327,7 +327,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Gets ord_type
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrdType
+     * @return \BlockChainRest\BlockChainRest.model\OrdType
      */
     public function getOrdType()
     {
@@ -337,7 +337,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Sets ord_type
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrdType $ord_type ord_type
+     * @param \BlockChainRest\BlockChainRest.model\OrdType $ord_type ord_type
      *
      * @return $this
      */
@@ -380,7 +380,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Gets side
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Side
+     * @return \BlockChainRest\BlockChainRest.model\Side
      */
     public function getSide()
     {
@@ -390,7 +390,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Sets side
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Side $side side
+     * @param \BlockChainRest\BlockChainRest.model\Side $side side
      *
      * @return $this
      */
@@ -428,7 +428,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Gets time_in_force
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\TimeInForce|null
+     * @return \BlockChainRest\BlockChainRest.model\TimeInForce|null
      */
     public function getTimeInForce()
     {
@@ -438,7 +438,7 @@ class BaseOrder implements ModelInterface, ArrayAccess
     /**
      * Sets time_in_force
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\TimeInForce|null $time_in_force time_in_force
+     * @param \BlockChainRest\BlockChainRest.model\TimeInForce|null $time_in_force time_in_force
      *
      * @return $this
      */

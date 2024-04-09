@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.model;
+namespace BlockChainRest\BlockChainRest.model;
 
 use \ArrayAccess;
-use \com.blockchain.exchange.rest\ObjectSerializer;
+use \BlockChainRest\ObjectSerializer;
 
 /**
  * BalanceMap Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,7 +57,7 @@ class BalanceMap implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'primary' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance[]'
+        'primary' => '\BlockChainRest\BlockChainRest.model\Balance[]'
     ];
 
     /**
@@ -210,7 +210,7 @@ class BalanceMap implements ModelInterface, ArrayAccess
     /**
      * Gets primary
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance[]
+     * @return \BlockChainRest\BlockChainRest.model\Balance[]
      */
     public function getPrimary()
     {
@@ -220,7 +220,7 @@ class BalanceMap implements ModelInterface, ArrayAccess
     /**
      * Sets primary
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance[] $primary primary
+     * @param \BlockChainRest\BlockChainRest.model\Balance[] $primary primary
      *
      * @return $this
      */

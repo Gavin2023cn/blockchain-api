@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,7 +27,7 @@
  * Please update the test case below to test the model.
  */
 
-namespace com.blockchain.exchange.rest;
+namespace BlockChainRest;
 
 use PHPUnit\Framework\TestCase;
 
@@ -36,7 +36,7 @@ use PHPUnit\Framework\TestCase;
  *
  * @category    Class
  * @description \&quot;GTC\&quot; for Good Till Cancel, \&quot;IOC\&quot; for Immediate or Cancel, \&quot;FOK\&quot; for Fill or Kill, \&quot;GTD\&quot; Good Till Date
- * @package     com.blockchain.exchange.rest
+ * @package     BlockChainRest
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */

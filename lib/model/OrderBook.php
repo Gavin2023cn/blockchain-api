@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.model;
+namespace BlockChainRest\BlockChainRest.model;
 
 use \ArrayAccess;
-use \com.blockchain.exchange.rest\ObjectSerializer;
+use \BlockChainRest\ObjectSerializer;
 
 /**
  * OrderBook Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -58,8 +58,8 @@ class OrderBook implements ModelInterface, ArrayAccess
       */
     protected static $openAPITypes = [
         'symbol' => 'string',
-        'bids' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBookEntry[]',
-        'asks' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBookEntry[]'
+        'bids' => '\BlockChainRest\BlockChainRest.model\OrderBookEntry[]',
+        'asks' => '\BlockChainRest\BlockChainRest.model\OrderBookEntry[]'
     ];
 
     /**
@@ -252,7 +252,7 @@ class OrderBook implements ModelInterface, ArrayAccess
     /**
      * Gets bids
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBookEntry[]|null
+     * @return \BlockChainRest\BlockChainRest.model\OrderBookEntry[]|null
      */
     public function getBids()
     {
@@ -262,7 +262,7 @@ class OrderBook implements ModelInterface, ArrayAccess
     /**
      * Sets bids
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBookEntry[]|null $bids bids
+     * @param \BlockChainRest\BlockChainRest.model\OrderBookEntry[]|null $bids bids
      *
      * @return $this
      */
@@ -276,7 +276,7 @@ class OrderBook implements ModelInterface, ArrayAccess
     /**
      * Gets asks
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBookEntry[]|null
+     * @return \BlockChainRest\BlockChainRest.model\OrderBookEntry[]|null
      */
     public function getAsks()
     {
@@ -286,7 +286,7 @@ class OrderBook implements ModelInterface, ArrayAccess
     /**
      * Sets asks
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderBookEntry[]|null $asks asks
+     * @param \BlockChainRest\BlockChainRest.model\OrderBookEntry[]|null $asks asks
      *
      * @return $this
      */

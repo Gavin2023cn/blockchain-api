@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -26,18 +26,18 @@
  * Please update the test case below to test the endpoint.
  */
 
-namespace com.blockchain.exchange.rest;
+namespace BlockChainRest;
 
-use \com.blockchain.exchange.rest\Configuration;
-use \com.blockchain.exchange.rest\ApiException;
-use \com.blockchain.exchange.rest\ObjectSerializer;
+use \BlockChainRest\Configuration;
+use \BlockChainRest\ApiException;
+use \BlockChainRest\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
  * TradingApiTest Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */

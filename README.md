@@ -40,11 +40,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+      "url": "git@github.com:Gavin2023cn/blockchain-api.git"
     }
   ],
   "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
+    "gavin2023cn/blockchain-api": "*@dev"
   }
 }
 ```
@@ -79,18 +79,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_withdrawal_request = new \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest(); // \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest | 
+$create_withdrawal_request = new \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest(); // \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest | 
 
 try {
     $result = $apiInstance->createWithdrawal($create_withdrawal_request);

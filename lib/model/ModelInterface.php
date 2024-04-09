@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest\com.blockchain.exchange.rest.model
+ * @package  BlockChainRest\BlockChainRest.model
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,12 +27,12 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.model;
+namespace BlockChainRest\BlockChainRest.model;
 
 /**
  * Interface abstracting model access.
  *
- * @package com.blockchain.exchange.rest\com.blockchain.exchange.rest.model
+ * @package BlockChainRest\BlockChainRest.model
  * @author  OpenAPI Generator team
  */
 interface ModelInterface

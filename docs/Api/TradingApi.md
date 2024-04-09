@@ -1,4 +1,4 @@
-# com.blockchain.exchange.rest\TradingApi
+# BlockChainRest\TradingApi
 
 All URIs are relative to *https://api.blockchain.com/v3/exchange*
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## createOrder
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderSummary createOrder($base_order)
+> \BlockChainRest\BlockChainRest.model\OrderSummary createOrder($base_order)
 
 Add an order
 
@@ -28,18 +28,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\TradingApi(
+$apiInstance = new BlockChainRest\Api\TradingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$base_order = new \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BaseOrder(); // \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BaseOrder | Trade
+$base_order = new \BlockChainRest\BlockChainRest.model\BaseOrder(); // \BlockChainRest\BlockChainRest.model\BaseOrder | Trade
 
 try {
     $result = $apiInstance->createOrder($base_order);
@@ -55,11 +55,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **base_order** | [**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BaseOrder**](../Model/BaseOrder.md)| Trade |
+ **base_order** | [**\BlockChainRest\BlockChainRest.model\BaseOrder**](../Model/BaseOrder.md)| Trade |
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderSummary**](../Model/OrderSummary.md)
+[**\BlockChainRest\BlockChainRest.model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -89,12 +89,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\TradingApi(
+$apiInstance = new BlockChainRest\Api\TradingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -149,12 +149,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\TradingApi(
+$apiInstance = new BlockChainRest\Api\TradingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -197,7 +197,7 @@ void (empty response body)
 
 ## getFees
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Fees getFees()
+> \BlockChainRest\BlockChainRest.model\Fees getFees()
 
 Get current fee level
 
@@ -209,12 +209,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\TradingApi(
+$apiInstance = new BlockChainRest\Api\TradingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -236,7 +236,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Fees**](../Model/Fees.md)
+[**\BlockChainRest\BlockChainRest.model\Fees**](../Model/Fees.md)
 
 ### Authorization
 
@@ -254,7 +254,7 @@ This endpoint does not need any parameter.
 
 ## getFills
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderSummary[] getFills($symbol, $from, $to, $limit)
+> \BlockChainRest\BlockChainRest.model\OrderSummary[] getFills($symbol, $from, $to, $limit)
 
 Get a list of filled orders
 
@@ -268,12 +268,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\TradingApi(
+$apiInstance = new BlockChainRest\Api\TradingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -305,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderSummary[]**](../Model/OrderSummary.md)
+[**\BlockChainRest\BlockChainRest.model\OrderSummary[]**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -323,7 +323,7 @@ Name | Type | Description  | Notes
 
 ## getOrderById
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderSummary getOrderById($order_id)
+> \BlockChainRest\BlockChainRest.model\OrderSummary getOrderById($order_id)
 
 Get a specific order
 
@@ -335,12 +335,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\TradingApi(
+$apiInstance = new BlockChainRest\Api\TradingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -366,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderSummary**](../Model/OrderSummary.md)
+[**\BlockChainRest\BlockChainRest.model\OrderSummary**](../Model/OrderSummary.md)
 
 ### Authorization
 
@@ -384,7 +384,7 @@ Name | Type | Description  | Notes
 
 ## getOrders
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderSummary[] getOrders($symbol, $from, $to, $status, $limit)
+> \BlockChainRest\BlockChainRest.model\OrderSummary[] getOrders($symbol, $from, $to, $status, $limit)
 
 Get a list orders
 
@@ -398,12 +398,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\TradingApi(
+$apiInstance = new BlockChainRest\Api\TradingApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -412,7 +412,7 @@ $apiInstance = new com.blockchain.exchange.rest\Api\TradingApi(
 $symbol = 'symbol_example'; // string | Only return results for this symbol
 $from = 56; // int | Epoch timestamp in ms
 $to = 56; // int | Epoch timestamp in ms
-$status = new \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderStatus(); // \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderStatus | Order Status
+$status = new \BlockChainRest\BlockChainRest.model\\BlockChainRest\BlockChainRest.model\OrderStatus(); // \BlockChainRest\BlockChainRest.model\OrderStatus | Order Status
 $limit = 100; // int | Maximum amount of results to return in a single call. If omitted, 100 results are returned by default.
 
 try {
@@ -432,12 +432,12 @@ Name | Type | Description  | Notes
  **symbol** | **string**| Only return results for this symbol | [optional]
  **from** | **int**| Epoch timestamp in ms | [optional]
  **to** | **int**| Epoch timestamp in ms | [optional]
- **status** | [**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderStatus**](../Model/.md)| Order Status | [optional]
+ **status** | [**\BlockChainRest\BlockChainRest.model\OrderStatus**](../Model/.md)| Order Status | [optional]
  **limit** | **int**| Maximum amount of results to return in a single call. If omitted, 100 results are returned by default. | [optional]
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderSummary[]**](../Model/OrderSummary.md)
+[**\BlockChainRest\BlockChainRest.model\OrderSummary[]**](../Model/OrderSummary.md)
 
 ### Authorization
 

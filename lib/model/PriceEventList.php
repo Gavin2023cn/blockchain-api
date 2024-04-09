@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.model;
+namespace BlockChainRest\BlockChainRest.model;
 
 use \ArrayAccess;
-use \com.blockchain.exchange.rest\ObjectSerializer;
+use \BlockChainRest\ObjectSerializer;
 
 /**
  * PriceEventList Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -57,7 +57,7 @@ class PriceEventList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $openAPITypes = [
-        'orders' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]'
+        'orders' => '\BlockChainRest\BlockChainRest.model\PriceEvent[]'
     ];
 
     /**
@@ -207,7 +207,7 @@ class PriceEventList implements ModelInterface, ArrayAccess
     /**
      * Gets orders
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]|null
+     * @return \BlockChainRest\BlockChainRest.model\PriceEvent[]|null
      */
     public function getOrders()
     {
@@ -217,7 +217,7 @@ class PriceEventList implements ModelInterface, ArrayAccess
     /**
      * Sets orders
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\PriceEvent[]|null $orders orders
+     * @param \BlockChainRest\BlockChainRest.model\PriceEvent[]|null $orders orders
      *
      * @return $this
      */

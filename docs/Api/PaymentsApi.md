@@ -1,4 +1,4 @@
-# com.blockchain.exchange.rest\PaymentsApi
+# BlockChainRest\PaymentsApi
 
 All URIs are relative to *https://api.blockchain.com/v3/exchange*
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 ## createWithdrawal
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo createWithdrawal($create_withdrawal_request)
+> \BlockChainRest\BlockChainRest.model\WithdrawalInfo createWithdrawal($create_withdrawal_request)
 
 Request a withdrawal
 
@@ -33,18 +33,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$create_withdrawal_request = new \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest(); // \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest | 
+$create_withdrawal_request = new \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest(); // \BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest | 
 
 try {
     $result = $apiInstance->createWithdrawal($create_withdrawal_request);
@@ -60,11 +60,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **create_withdrawal_request** | [**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\CreateWithdrawalRequest**](../Model/CreateWithdrawalRequest.md)|  |
+ **create_withdrawal_request** | [**\BlockChainRest\BlockChainRest.model\CreateWithdrawalRequest**](../Model/CreateWithdrawalRequest.md)|  |
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo**](../Model/WithdrawalInfo.md)
+[**\BlockChainRest\BlockChainRest.model\WithdrawalInfo**](../Model/WithdrawalInfo.md)
 
 ### Authorization
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 ## getAccountByTypeAndCurrency
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance getAccountByTypeAndCurrency($account, $currency)
+> \BlockChainRest\BlockChainRest.model\Balance getAccountByTypeAndCurrency($account, $currency)
 
 Receive current account balances
 
@@ -94,12 +94,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Balance**](../Model/Balance.md)
+[**\BlockChainRest\BlockChainRest.model\Balance**](../Model/Balance.md)
 
 ### Authorization
 
@@ -145,7 +145,7 @@ Name | Type | Description  | Notes
 
 ## getAccounts
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap getAccounts()
+> \BlockChainRest\BlockChainRest.model\BalanceMap getAccounts()
 
 Receive current account balances
 
@@ -157,12 +157,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -184,7 +184,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\BalanceMap**](../Model/BalanceMap.md)
+[**\BlockChainRest\BlockChainRest.model\BalanceMap**](../Model/BalanceMap.md)
 
 ### Authorization
 
@@ -202,7 +202,7 @@ This endpoint does not need any parameter.
 
 ## getDepositAddress
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto getDepositAddress($currency)
+> \BlockChainRest\BlockChainRest.model\DepositAddressCrypto getDepositAddress($currency)
 
 Get a deposit address. Currently only crypto currencies are supported
 
@@ -214,12 +214,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -245,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositAddressCrypto**](../Model/DepositAddressCrypto.md)
+[**\BlockChainRest\BlockChainRest.model\DepositAddressCrypto**](../Model/DepositAddressCrypto.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ## getDepositById
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo getDepositById($deposit_id)
+> \BlockChainRest\BlockChainRest.model\DepositInfo getDepositById($deposit_id)
 
 Get status about a deposit
 
@@ -275,12 +275,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -306,7 +306,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo**](../Model/DepositInfo.md)
+[**\BlockChainRest\BlockChainRest.model\DepositInfo**](../Model/DepositInfo.md)
 
 ### Authorization
 
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 
 ## getDeposits
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[] getDeposits($from, $to)
+> \BlockChainRest\BlockChainRest.model\DepositInfo[] getDeposits($from, $to)
 
 Get a list of deposits
 
@@ -336,12 +336,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -369,7 +369,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\DepositInfo[]**](../Model/DepositInfo.md)
+[**\BlockChainRest\BlockChainRest.model\DepositInfo[]**](../Model/DepositInfo.md)
 
 ### Authorization
 
@@ -387,7 +387,7 @@ Name | Type | Description  | Notes
 
 ## getWhitelist
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[] getWhitelist()
+> \BlockChainRest\BlockChainRest.model\WhitelistEntry[] getWhitelist()
 
 Get a list of all whitelisted withdrawal accounts
 
@@ -399,12 +399,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -426,7 +426,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]**](../Model/WhitelistEntry.md)
+[**\BlockChainRest\BlockChainRest.model\WhitelistEntry[]**](../Model/WhitelistEntry.md)
 
 ### Authorization
 
@@ -444,7 +444,7 @@ This endpoint does not need any parameter.
 
 ## getWhitelistByCurrency
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[] getWhitelistByCurrency($currency)
+> \BlockChainRest\BlockChainRest.model\WhitelistEntry[] getWhitelistByCurrency($currency)
 
 Get a list of all whitelisted withdrawal accounts
 
@@ -456,12 +456,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -487,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WhitelistEntry[]**](../Model/WhitelistEntry.md)
+[**\BlockChainRest\BlockChainRest.model\WhitelistEntry[]**](../Model/WhitelistEntry.md)
 
 ### Authorization
 
@@ -505,7 +505,7 @@ Name | Type | Description  | Notes
 
 ## getWithdrawalById
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo getWithdrawalById($withdrawal_id)
+> \BlockChainRest\BlockChainRest.model\WithdrawalInfo getWithdrawalById($withdrawal_id)
 
 Get status about a withdrawal
 
@@ -517,12 +517,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo**](../Model/WithdrawalInfo.md)
+[**\BlockChainRest\BlockChainRest.model\WithdrawalInfo**](../Model/WithdrawalInfo.md)
 
 ### Authorization
 
@@ -566,7 +566,7 @@ Name | Type | Description  | Notes
 
 ## getWithdrawals
 
-> \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[] getWithdrawals($from, $to)
+> \BlockChainRest\BlockChainRest.model\WithdrawalInfo[] getWithdrawals($from, $to)
 
 Get a list of withdrawals
 
@@ -578,12 +578,12 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: ApiKeyAuth
-$config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
+$config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKey('X-API-Token', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = com.blockchain.exchange.rest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
+// $config = BlockChainRest\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-API-Token', 'Bearer');
 
 
-$apiInstance = new com.blockchain.exchange.rest\Api\PaymentsApi(
+$apiInstance = new BlockChainRest\Api\PaymentsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\WithdrawalInfo[]**](../Model/WithdrawalInfo.md)
+[**\BlockChainRest\BlockChainRest.model\WithdrawalInfo[]**](../Model/WithdrawalInfo.md)
 
 ### Authorization
 

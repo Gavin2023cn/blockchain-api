@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -27,16 +27,16 @@
  * Do not edit the class manually.
  */
 
-namespace com.blockchain.exchange.rest\com.blockchain.exchange.rest.model;
+namespace BlockChainRest\BlockChainRest.model;
 
 use \ArrayAccess;
-use \com.blockchain.exchange.rest\ObjectSerializer;
+use \BlockChainRest\ObjectSerializer;
 
 /**
  * OrderSummary Class Doc Comment
  *
  * @category Class
- * @package  com.blockchain.exchange.rest
+ * @package  BlockChainRest
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
@@ -59,9 +59,9 @@ class OrderSummary implements ModelInterface, ArrayAccess
     protected static $openAPITypes = [
         'ex_ord_id' => 'int',
         'cl_ord_id' => 'string',
-        'ord_type' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrdType',
-        'ord_status' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderStatus',
-        'side' => '\com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Side',
+        'ord_type' => '\BlockChainRest\BlockChainRest.model\OrdType',
+        'ord_status' => '\BlockChainRest\BlockChainRest.model\OrderStatus',
+        'side' => '\BlockChainRest\BlockChainRest.model\Side',
         'price' => 'double',
         'text' => 'string',
         'symbol' => 'string',
@@ -367,7 +367,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Gets ord_type
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrdType
+     * @return \BlockChainRest\BlockChainRest.model\OrdType
      */
     public function getOrdType()
     {
@@ -377,7 +377,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ord_type
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrdType $ord_type ord_type
+     * @param \BlockChainRest\BlockChainRest.model\OrdType $ord_type ord_type
      *
      * @return $this
      */
@@ -391,7 +391,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Gets ord_status
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderStatus
+     * @return \BlockChainRest\BlockChainRest.model\OrderStatus
      */
     public function getOrdStatus()
     {
@@ -401,7 +401,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets ord_status
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\OrderStatus $ord_status ord_status
+     * @param \BlockChainRest\BlockChainRest.model\OrderStatus $ord_status ord_status
      *
      * @return $this
      */
@@ -415,7 +415,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Gets side
      *
-     * @return \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Side
+     * @return \BlockChainRest\BlockChainRest.model\Side
      */
     public function getSide()
     {
@@ -425,7 +425,7 @@ class OrderSummary implements ModelInterface, ArrayAccess
     /**
      * Sets side
      *
-     * @param \com.blockchain.exchange.rest\com.blockchain.exchange.rest.model\Side $side side
+     * @param \BlockChainRest\BlockChainRest.model\Side $side side
      *
      * @return $this
      */
